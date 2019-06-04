@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "es6",
     "removeComments": true,
-    "outDir": "js",
+    "outDir": "js/",
+
     "sourceMap": true,
-    "outFile": "./js/main.js",
     "strict": true,
     "charset": "utf8",
     "emitBOM": true
