@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "removeComments": true,
-    "outDir": "js/",
+//    "removeComments": true,
+    "outDir": "src/js/",
 
     "sourceMap": true,
     "strict": true,
