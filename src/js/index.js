@@ -1,9 +1,10 @@
 ﻿import { Game } from "./Core/main";
-let canvase = document.querySelector("canvas");
+let canvas = document.querySelector("canvas");
 let game = new Game({
-    canvas: canvase,
+    canvas: canvas,
     width: 500,
     height: 500,
     speed: 100,
+    cellSize: 20
 });
 //# sourceMappingURL=index.js.map
