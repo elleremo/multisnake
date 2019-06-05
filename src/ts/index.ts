@@ -1,6 +1,6 @@
-import {Game} from "./Core/main";
+import {Game} from "./Core/game";
 
-let canvas= document.querySelector("canvas");
+let canvas = document.querySelector("canvas");
 
 
 let game: Game = new Game({
@@ -8,6 +8,6 @@ let game: Game = new Game({
     width : 500,
     height: 500,
     speed: 100,
-    cellSize: 20
+    cellSize: 20,
+    snakeSize: 20,
 });
-
