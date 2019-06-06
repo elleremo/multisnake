@@ -1,5 +1,6 @@
+import {Props} from "./Types"
 // Надо написать менеджер уровней
-console.log('From Level');
+
 class Vector {
 
     _length: number =0 ;
@@ -30,7 +31,7 @@ class Level {
 
     constructor(props: {} ) {
         this.props = props;
+        console.log('From LEVEL');
     }
-
 }
 export { Level }

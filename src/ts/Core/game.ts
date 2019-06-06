@@ -1,6 +1,11 @@
 import {Level} from "./level"
+import {Render} from "./render"
+import {Props} from "./Types"
+// import {LevelManager} from "./level_manager"
+// import {ObjectManager} from "./object_manager"
+
 //, Render, LevelManager, ObjectManager
-console.log('From Game');
+
 
 // Game.level
 // Game.render
@@ -11,20 +16,11 @@ console.log('From Game');
 // Создает публичные подкласы для доступа извне
 // Имеет методы Stop, Run, Reload
 
-type Props = {
-    canvas: any;
 
-    ctx?: CanvasRenderingContext2D;
-    speed?: number;
-    width?: number;
-    height?: number;
-    cellSize?: number;
-    snakeSize?: number;
-}
 
 
 class Game {
-
+    // Ссылка-объект, доступен для изменения другим классам
     props: Props = {
         canvas: 500,
         width: 500,
@@ -33,33 +29,41 @@ class Game {
         cellSize: 20,
         snakeSize: 20
     };
+    level : Level;
+    render : Render;
 
-    level = new Level(this.props);
-    // render = new Render();
     // levelManager = new LevelManager();
     // objectManager = new ObjectManager();
 
     constructor(props: Props) {
+
         this.props = props;
         this.props.ctx = this.props.canvas.getContext("2d");
+
+        this.resizeCanvas(props.width,props.height);
+
+        this.level = new Level(this.props);
+        this.render = new Render(this.props);
+        this.render.run();
     }
 
     // newGame() {
     //     this.level = new Level();
     // }
 
-    set height(value: number) {
-        this.props.height = value;
-        this.props.canvas.height = value;
-    }
-
     set width(value: number) {
         this.props.width = value;
         this.props.canvas.width = value;
     }
 
+    set height(value: number) {
+        this.props.height = value;
+        this.props.canvas.height = value;
+    }
+
+    // Решить проблему с типизацией undefined
     resizeCanvas(width: number, height: number) {
-        this.width = width;
+        this.width = width ;
         this.height = height;
     }
 }

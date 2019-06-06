@@ -1,5 +1,5 @@
 ﻿import { Level } from "./level";
-console.log('From Game');
+import { Render } from "./render";
 class Game {
     constructor(props) {
         this.props = {
@@ -10,17 +10,20 @@ class Game {
             cellSize: 20,
             snakeSize: 20
         };
-        this.level = new Level(this.props);
         this.props = props;
         this.props.ctx = this.props.canvas.getContext("2d");
-    }
-    set height(value) {
-        this.props.height = value;
-        this.props.canvas.height = value;
+        this.resizeCanvas(props.width, props.height);
+        this.level = new Level(this.props);
+        this.render = new Render(this.props);
+        this.render.run();
     }
     set width(value) {
         this.props.width = value;
         this.props.canvas.width = value;
+    }
+    set height(value) {
+        this.props.height = value;
+        this.props.canvas.height = value;
     }
     resizeCanvas(width, height) {
         this.width = width;
@@ -28,4 +31,3 @@ class Game {
     }
 }
 export { Game };
-//# sourceMappingURL=game.js.map

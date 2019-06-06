@@ -1,5 +1,4 @@
-﻿console.log('From Level');
-class Vector {
+﻿class Vector {
     constructor(x, y) {
         this._length = 0;
         this.x = x;
@@ -19,7 +18,7 @@ class Level {
     constructor(props) {
         this.props = {};
         this.props = props;
+        console.log('From LEVEL');
     }
 }
 export { Level };
-//# sourceMappingURL=level.js.map
