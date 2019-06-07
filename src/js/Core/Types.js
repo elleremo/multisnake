@@ -1,4 +1,33 @@
-﻿class OV {
+﻿class Cell {
+    constructor(size, x, y, turn, color) {
+        this.turn = false;
+        this.size = size;
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.turn = turn;
+    }
+}
+class VGrid {
+    constructor(pxSize, amountX, amountY) {
+        this.pxSize = pxSize;
+        this.amountX = amountX;
+        this.amountY = amountY;
+        this.createMatrix();
+    }
+    createMatrix() {
+        let x;
+        let y;
+        for (i = 0; i < this.amountX; i++) {
+            x.push(i);
+        }
+        for (i = 0; i < this.amountY; i++) {
+            y.push(i);
+        }
+        this.matrix = [x, y];
+    }
+}
+class OV {
 }
 export class Vector {
     constructor(x, y) {
