@@ -3,11 +3,11 @@ let canvas = document.querySelector("canvas");
 console.log('FROM I4ndex');
 let game = new Game({
     canvas: canvas,
-    width: 502,
-    height: 502,
+    width: 500,
+    height: 500,
     speed: 100,
-    cellSize: 50,
-    snakeSize: 20,
+    cellSize: 20,
+    snakeSize: 30,
 });
 console.log('5 - FROM I4ndex', game.props.ctx);
 console.log('5 - FROM I4ndex', undefined == true);

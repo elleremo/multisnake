@@ -22,7 +22,7 @@ import {Props} from "./Types"
 class Game {
     // Ссылка-объект, доступен для изменения другим классам
     props: Props = {
-        canvas: 500,
+        canvas: HTMLCanvasElement,
         width: 500,
         height: 500,
         speed: 100,
@@ -38,13 +38,16 @@ class Game {
     constructor(props: Props) {
 
         this.props = props;
+        this.props.width +=2; //
+        this.props.height +=2; //
+
         this.props.ctx = this.props.canvas.getContext("2d");
 
         this.resizeCanvas(props.width,props.height);
 
         this.level = new Level(this.props);
         this.render = new Render(this.props);
-        this.render.run();
+        this.render.drawGrid();
     }
 
     // newGame() {

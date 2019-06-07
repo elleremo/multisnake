@@ -5,11 +5,11 @@ console.log('FROM I4ndex');
 
 let game: Game = new Game({
     canvas : canvas,
-    width : 502,
-    height: 502,
+    width : 500,
+    height: 500,
     speed: 100,
-    cellSize: 50,
-    snakeSize: 20,
+    cellSize: 20, // кратный 500
+    snakeSize: 30,
 });
 
 // game.height =200;
