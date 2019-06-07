@@ -2,124 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1435bc0d-b984-44f1-8dae-980dcc0e31c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.bin/json5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/LICENCE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/big.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/big.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/big.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/big.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/clone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/clone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/clone/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/emojis-list/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/emojis-list/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/emojis-list/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/emojis-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/emojis-list/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/cli.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/require.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/stringify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/unicode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/lib/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/json5/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/cjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/createWebpackLessPlugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/formatLessError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/getOptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/processResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/removeSourceMappingUrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/dist/stringifyLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/less-loader/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/getCurrentRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/getHashDigest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/getOptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/getRemainingRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/interpolateName.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/isUrlRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/parseQuery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/parseString.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/stringifyRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/lib/urlToRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/loader-utils/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/example/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/readme.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/all_bool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/bool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/dash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/default_bool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/dotted.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/kv_short.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/num.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/parse_modified.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/short.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/stop_early.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/unknown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/minimist/test/whitespace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pify/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pify/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pify/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pify/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/less/main.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ts/Core/Types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/browser.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/browser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/tile-wide.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tile-wide.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/tile.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/game.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/game.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/level.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/level.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/level_manager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/level_manager.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/object_manager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/object_manager.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/render.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/Core/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/game.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/Core/level.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/level.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/Core/render.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/render.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="77">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -155,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/render.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -168,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -177,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/ts/Core/level.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -185,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -194,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsconfig.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="595">
               <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
             </state>
           </provider>
@@ -204,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/dist/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -292,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,6 +208,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,18 +286,18 @@
       <workItem from="1559726372678" duration="138000" />
       <workItem from="1559726543646" duration="698000" />
       <workItem from="1559729400740" duration="13259000" />
-      <workItem from="1559807143194" duration="17833000" />
+      <workItem from="1559807143194" duration="17883000" />
+      <workItem from="1559893954337" duration="536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64435000" />
+    <option name="totallyTimeSpent" value="65021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="610" y="23" width="1310" height="1021" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7034596" visible="true" weight="0.16876972" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7034596" visible="true" weight="0.17113565" />
       <window_info id="Structure" order="1" sideWeight="0.29654035" side_tool="true" weight="0.19085173" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -423,12 +306,12 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49526814" weight="0.2831001" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TypeScript" order="6" sideWeight="0.48895898" visible="true" weight="0.24434876" />
+      <window_info anchor="bottom" id="TypeScript" order="6" sideWeight="0.48817036" visible="true" weight="0.24434876" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49921137" weight="0.32831" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.511041" side_tool="true" visible="true" weight="0.24434876" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.5118297" side_tool="true" visible="true" weight="0.24434876" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.53391165" side_tool="true" weight="0.2583423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -563,17 +446,8 @@
     <entry file="file://$PROJECT_DIR$/src/js/Core/level_manager.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/index.js.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/js/index.js.map" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -612,16 +486,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/webpack.config.js" />
     <entry file="file://$PROJECT_DIR$/src/js/Core/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -646,37 +511,6 @@
     <entry file="file://$PROJECT_DIR$/src/js/Core/Types.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/level.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -684,17 +518,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/Core/render.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/level.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
