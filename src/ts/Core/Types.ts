@@ -40,10 +40,10 @@ class VGrid { // Виртульная сетка в виде матрицы
         let x: [number];
         let y: [number];
 
-        for (i = 0; i < this.amountX; i++) {
+        for (let  i = 0; i < this.amountX; i++) {
             x.push(i) }
 
-        for (i = 0; i < this.amountY; i++) {
+        for (let i = 0; i < this.amountY; i++) {
             y.push(i) }
 
         this.matrix = [ x, y]
@@ -86,9 +86,11 @@ export type Props = {
     canvas: any;
 
     ctx?: CanvasRenderingContext2D;
+    gridSize?: number;
+    step?: number;
     speed?: number;
-    width?: number;
-    height?: number;
-    cellSize?: number;
+    // cellSize?: number;
     snakeSize?: number;
+    width? :  number;
+    height? :  number;
 }

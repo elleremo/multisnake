@@ -1,37 +1,46 @@
 import {Game} from "./Core/game";
 
 let canvas = document.querySelector("canvas");
-console.log('FROM I4ndex');
-
-let game: Game = new Game({
+ let game: Game = new Game({
     canvas : canvas,
-    width : 500,
-    height: 500,
+    gridSize : 10,
+    step: 30, // размер клетки
     speed: 100,
-    cellSize: 20, // кратный 500
-    snakeSize: 30,
+    snakeSize: 20,
 });
 
-// game.height =200;
+console.log("CTX :" , game.props.ctx);
 
-console.log('5 - FROM I4ndex', game.props.ctx);
-console.log('5 - FROM I4ndex', undefined == true);
-console.log('5 - FROM I4ndex', undefined === false);
+// game.resizeCanvas(2, 50);
 
-let matrix : number[][];
-createMatrix();
+console.log("CTX after : " , game.props.ctx);
 
-function createMatrix () {
-    let x: [number] = [0];
-    let y: [number] = [5];
 
-    for (let i = 0; i < 10; i++) {
-        x.push(i) }
 
-    for (let i = 0; i < 10; i++) {
-        y.push(i) }
+// game.render.drawGrid();
+console.log('5 - FROM I4ndex', game.props);
 
-    matrix = [ x, y]
-}
 
-console.log(matrix);
+
+
+// let matrix : {x:[number],y:[number]} = { x : [0], y : [] };
+//
+// createMatrix();
+// console.log(matrix );
+//
+// function createMatrix () {
+//     let x: [number] = [0];
+//     let y: [number] = [0];
+//
+//     for (let i = 0; i < 10; i++) {
+//         x.push(i) }
+//
+//     for (let i = 0; i < 10; i++) {
+//         y.push(i) }
+//
+//     matrix.x = x;
+//     matrix.y = y;
+//
+// }
+
+

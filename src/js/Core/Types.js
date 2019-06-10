@@ -18,10 +18,10 @@ class VGrid {
     createMatrix() {
         let x;
         let y;
-        for (i = 0; i < this.amountX; i++) {
+        for (let i = 0; i < this.amountX; i++) {
             x.push(i);
         }
-        for (i = 0; i < this.amountY; i++) {
+        for (let i = 0; i < this.amountY; i++) {
             y.push(i);
         }
         this.matrix = [x, y];

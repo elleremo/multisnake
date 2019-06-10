@@ -3,28 +3,27 @@
         this.props = props;
     }
     clearGrid() {
-        this.props.ctx.clearRect(0, 0, this.props.width, this.props.height - 2);
+        this.props.ctx.clearRect(0, 0, this.props.width, this.props.height);
         console.log("clearGrid");
     }
     drawGrid() {
         this.clearGrid();
-        let step = this.props.cellSize;
+        let step = this.props.step;
         let ctx = this.props.ctx;
         ctx.lineWidth = 1;
         ctx.strokeStyle = '#d3d1d0';
-        for (var i = 1; i < this.props.width; i += step) {
-            ctx.moveTo(i, 0);
-            ctx.lineTo(i, this.props.height);
+        for (let i = 0; i < this.props.gridSize; i++) {
+            ctx.moveTo(i * step, 0);
+            ctx.lineTo(i * step, this.props.height);
             ctx.stroke();
-            console.log('i = ', i);
         }
-        for (var i = 1; i < this.props.height; i += step) {
-            ctx.moveTo(0, i);
-            ctx.lineTo(this.props.width, i);
+        for (var i = 0; i < this.props.gridSize; i++) {
+            ctx.moveTo(0, i * step);
+            ctx.lineTo(this.props.width, i * step);
             ctx.stroke();
         }
         ctx.strokeStyle = '#000000';
-        ctx.strokeRect(1, 1, this.props.width - 2, this.props.height - 2);
+        ctx.strokeRect(0, 0, this.props.width, this.props.height);
         console.log("DrawGrid");
     }
 }

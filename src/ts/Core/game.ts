@@ -23,12 +23,13 @@ class Game {
     // Ссылка-объект, доступен для изменения другим классам
     props: Props = {
         canvas: HTMLCanvasElement,
-        width: 500,
-        height: 500,
+        gridSize: 20,
+        step: 20,
         speed: 100,
-        cellSize: 20,
         snakeSize: 20
-    };
+     };
+
+
     level : Level;
     render : Render;
 
@@ -38,36 +39,51 @@ class Game {
     constructor(props: Props) {
 
         this.props = props;
-        this.props.width +=2; //
-        this.props.height +=2; //
-
         this.props.ctx = this.props.canvas.getContext("2d");
 
-        this.resizeCanvas(props.width,props.height);
 
-        this.level = new Level(this.props);
+
+        // this.level = new Level(this.props);
         this.render = new Render(this.props);
+
+        this.resizeCanvas(this.props.gridSize, this.props.step);
+
         this.render.drawGrid();
+        // console.log( 'PROPS: ', this.props );
+
     }
 
     // newGame() {
     //     this.level = new Level();
     // }
 
-    set width(value: number) {
-        this.props.width = value;
-        this.props.canvas.width = value;
+    set gridSize(value: number) {
+        this.props.gridSize = value; // 20
+
+        this.props.width = value * this.props.step;
+        this.props.height = value * this.props.step;
+
+        this.props.canvas.width = this.props.width;
+        this.props.canvas.height = this.props.height;
+
     }
 
-    set height(value: number) {
-        this.props.height = value;
-        this.props.canvas.height = value;
+    set step(value: number) {
+        this.props.step = value;
+
+        this.props.width = value * this.props.gridSize;
+        this.props.height = value * this.props.gridSize;
+
+        this.props.canvas.width = this.props.width;
+        this.props.canvas.height = this.props.height;
     }
 
     // Решить проблему с типизацией undefined
-    resizeCanvas(width: number, height: number) {
-        this.width = width ;
-        this.height = height;
+    public resizeCanvas(gridSize: number, step: number) {
+        this.step = step ;
+        this.gridSize = gridSize;
+
+        console.log("resizeCanvas");
     }
 }
 
