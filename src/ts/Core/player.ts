@@ -1,4 +1,4 @@
-import {Props, Color} from "./Types"
+import {Props, Color, Vector} from "./Types"
 
 // Snake должен уметь двигаться
 // Возможносто стоит создать вектор движения
@@ -13,6 +13,8 @@ export class Snake {
     color: Color = '#c976c1';
     head: Color = '#553887';
     size: number;
+    pos: Vector = new Vector(this.length + 1, 1);
+    speed :number;
 
     static CountSnakes: number = 0;
 
@@ -22,6 +24,7 @@ export class Snake {
         this.id += 1;
         this.props = props;
         this.size = this.props.snakeSize;
+        this.speed = props.speed;
     }
 
     draw() {
@@ -29,19 +32,27 @@ export class Snake {
         ctx.fillStyle = this.color;
 
         let size = this.size;
-        let headpos = (length + 1) * size;
+        // let headpos = (length + 1) * size;
 
-        for (let i = this.length; i > 0; i--) {
+        for (let i = this.pos.x; i > this.pos.x-this.length ; i--) {
 
-            let x = i * size;
+            let x = this.pos.x * size;
+            let y = this.pos.y *20;
             console.log(x);
-            ctx.fillRect(x + 2, 2, size - 4, size - 4);
+            ctx.fillRect(x + 3, this.pos.y+3, size - 6, size - 6);
         }
     }
 
-    run() {
-        let id = setInterval(function () {
+    move(){
 
-        }, 300)
+        this.pos.x += 1;
+    }
+
+    animate() {
+        let o = this;
+        let id = setInterval(function () {
+             o.draw();
+             o.move();
+        }, 250)
     }
 }

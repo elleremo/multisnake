@@ -4,16 +4,10 @@
     <list default="true" id="1435bc0d-b984-44f1-8dae-980dcc0e31c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/Core/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Core/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/Core/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Core/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Core/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Core/render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/Core/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/Types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ts/Core/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/game.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ts/Core/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/player.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/Core/render.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/render.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/index.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,12 +43,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+            <state relative-caret-position="356">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <element signature="n#Setting#0" />
-                <marker date="1560262761819" expanded="true" signature="1209:1269" ph="..." />
+                <marker date="1560265870679" expanded="true" signature="1209:1269" ph="..." />
               </folding>
             </state>
           </provider>
@@ -63,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/player.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="440">
+              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -72,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="799">
+              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -317,12 +311,12 @@
       <workItem from="1559807143194" duration="17883000" />
       <workItem from="1559893954337" duration="536000" />
       <workItem from="1560153102219" duration="15581000" />
-      <workItem from="1560239218593" duration="14566000" />
+      <workItem from="1560239218593" duration="17262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107576000" />
+    <option name="totallyTimeSpent" value="110272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1021" extended-state="6" />
@@ -337,12 +331,12 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49526814" weight="0.2831001" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TypeScript" order="6" sideWeight="0.4084132" visible="true" weight="0.24434876" />
+      <window_info anchor="bottom" id="TypeScript" order="6" sideWeight="0.4084132" visible="true" weight="0.24434876" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49921137" weight="0.32831" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.59158677" side_tool="true" visible="true" weight="0.24434876" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.59158677" side_tool="true" visible="true" weight="0.24434876" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.53391165" side_tool="true" weight="0.2583423" />
       <window_info anchor="right" x="0" y="0" width="430" height="821" id="Documentation" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -578,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -599,22 +586,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        <state relative-caret-position="356">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
             <element signature="n#Setting#0" />
-            <marker date="1560262761819" expanded="true" signature="1209:1269" ph="..." />
+            <marker date="1560265870679" expanded="true" signature="1209:1269" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/Core/player.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="440">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
         </state>
       </provider>
     </entry>

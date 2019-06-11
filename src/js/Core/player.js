@@ -1,28 +1,37 @@
-﻿export class Snake {
+﻿import { Vector } from "./Types";
+export class Snake {
     constructor(props) {
         this.id = -1;
         this.length = 5;
         this.color = '#c976c1';
         this.head = '#553887';
+        this.pos = new Vector(this.length + 1, 1);
         Snake.CountSnakes += 1;
         this.id += 1;
         this.props = props;
         this.size = this.props.snakeSize;
+        this.speed = props.speed;
     }
     draw() {
         let ctx = this.props.ctx;
         ctx.fillStyle = this.color;
         let size = this.size;
-        let headpos = (length + 1) * size;
-        for (let i = this.length; i > 0; i--) {
-            let x = i * size;
+        for (let i = this.pos.x; i > this.pos.x - this.length; i--) {
+            let x = this.pos.x * size;
+            let y = this.pos.y * 20;
             console.log(x);
-            ctx.fillRect(x + 2, 2, size - 4, size - 4);
+            ctx.fillRect(x + 3, this.pos.y + 3, size - 6, size - 6);
         }
     }
-    run() {
+    move() {
+        this.pos.x += 1;
+    }
+    animate() {
+        let o = this;
         let id = setInterval(function () {
-        }, 300);
+            o.draw();
+            o.move();
+        }, 250);
     }
 }
 Snake.CountSnakes = 0;
