@@ -2,11 +2,8 @@
 let canvas = document.querySelector("canvas");
 let game = new Game({
     canvas: canvas,
-    gridSize: 10,
-    step: 30,
+    gridSize: 20,
+    step: 20,
     speed: 100,
-    snakeSize: 20,
+    snakeSize: 20
 });
-console.log("CTX :", game.props.ctx);
-console.log("CTX after : ", game.props.ctx);
-console.log('5 - FROM I4ndex', game.props);

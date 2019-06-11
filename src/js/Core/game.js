@@ -1,37 +1,50 @@
-﻿import { Render } from "./render";
+﻿import { Level } from "./level";
+import { Render } from "./render";
+import { Snake } from "./player";
+class Setting {
+    constructor(setting) {
+        this.gridSize = 20;
+        this.step = 20;
+        this.speed = 100;
+        this.snakeSize = 20;
+        this.canvas = setting.canvas;
+        this.ctx = setting.canvas.getContext("2d");
+        this.step = setting.step;
+        this.gridSize = setting.gridSize;
+        this.snakeSize = setting.snakeSize;
+    }
+    set newGridSize(value) {
+        this.gridSize = value;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    }
+    set newStep(value) {
+        this.step = value;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    }
+    get width() {
+        return this.gridSize * this.step;
+    }
+    get height() {
+        return this.gridSize * this.step;
+    }
+}
 class Game {
-    constructor(props) {
-        this.props = {
-            canvas: HTMLCanvasElement,
-            gridSize: 20,
-            step: 20,
-            speed: 100,
-            snakeSize: 20
-        };
-        this.props = props;
-        this.props.ctx = this.props.canvas.getContext("2d");
-        this.render = new Render(this.props);
-        this.resizeCanvas(this.props.gridSize, this.props.step);
-        this.render.drawGrid();
+    constructor(set) {
+        this.setting = new Setting(set);
+        this.level = new Level(this.setting);
+        this.render = new Render(this.setting);
+        this.resizeCanvas(this.setting.gridSize, this.setting.step);
+        this.player = new Snake(this.setting);
+        this.player.draw();
     }
-    set gridSize(value) {
-        this.props.gridSize = value;
-        this.props.width = value * this.props.step;
-        this.props.height = value * this.props.step;
-        this.props.canvas.width = this.props.width;
-        this.props.canvas.height = this.props.height;
-    }
-    set step(value) {
-        this.props.step = value;
-        this.props.width = value * this.props.gridSize;
-        this.props.height = value * this.props.gridSize;
-        this.props.canvas.width = this.props.width;
-        this.props.canvas.height = this.props.height;
+    start() {
     }
     resizeCanvas(gridSize, step) {
-        this.step = step;
-        this.gridSize = gridSize;
-        console.log("resizeCanvas");
+        this.setting.newStep = step;
+        this.setting.newGridSize = gridSize;
+        this.render.drawGrid();
     }
 }
 export { Game };

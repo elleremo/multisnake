@@ -2,16 +2,16 @@ import {Props} from "./Types"
 
 export class Render {
 
-    props: Props;
+    setting: Props;
 
 
-    constructor(props: Props) {
-        this.props = props;
+    constructor(setting: Props) {
+        this.setting = setting;
     }
 
     clearGrid(){
 
-        this.props.ctx.clearRect(0, 0, this.props.width, this.props.height);
+        this.setting.ctx.clearRect(0, 0, this.setting.width, this.setting.height);
         console.log ("clearGrid");
     }
 
@@ -19,29 +19,29 @@ export class Render {
 
         this.clearGrid();
 
-        let step: number  = this.props.step;
-        let ctx : CanvasRenderingContext2D = this.props.ctx;
+        let step: number  = this.setting.step;
+        let ctx : CanvasRenderingContext2D = this.setting.ctx;
 
         ctx.lineWidth = 1;
         ctx.strokeStyle = '#d3d1d0';
 
                         // кол-во клеток
-        for (let i = 0; i < this.props.gridSize; i++) {
+        for (let i = 0; i < this.setting.gridSize; i++) {
             ctx.moveTo(i*step, 0);
-            ctx.lineTo(i*step, this.props.height);
+            ctx.lineTo(i*step, this.setting.height);
             ctx.stroke();
             // console.log ('i = ', i);
         }
 
-        for (var i = 0; i < this.props.gridSize; i++) {
+        for (var i = 0; i < this.setting.gridSize; i++) {
             ctx.moveTo(0, i*step);
-            ctx.lineTo(this.props.width, i*step);
+            ctx.lineTo(this.setting.width, i*step);
             ctx.stroke();
         }
 
         ctx.strokeStyle = '#000000';
         // ctx.fillRect(250,50,50,50);
-        ctx.strokeRect(0,0,this.props.width,this.props.height);
+        ctx.strokeRect(0,0,this.setting.width,this.setting.height);
 
         // ctx.stroke();
         // ctx.fill();

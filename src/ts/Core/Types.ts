@@ -1,8 +1,6 @@
 import enumerate = Reflect.enumerate;
 
-type Color = {
-    color: string;
-}
+export type Color =  string;
 
 class Cell {
 
@@ -83,14 +81,17 @@ export class Rect extends Vector {
 
 
 export type Props = {
-    canvas: any;
+    canvas?: HTMLCanvasElement | undefined;
 
-    ctx?: CanvasRenderingContext2D;
-    gridSize?: number;
-    step?: number;
-    speed?: number;
+    ctx?: CanvasRenderingContext2D | undefined;
+    gridSize: number;
+    step: number;
+    speed: number;
     // cellSize?: number;
-    snakeSize?: number;
-    width? :  number;
-    height? :  number;
+    snakeSize: number;
+
+    width?: number;
+    height?: number;
+
+
 }

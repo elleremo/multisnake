@@ -3,23 +3,21 @@ import {Game} from "./Core/game";
 let canvas = document.querySelector("canvas");
  let game: Game = new Game({
     canvas : canvas,
-    gridSize : 10,
-    step: 30, // размер клетки
+    gridSize : 20,
+    step: 20, // размер клетки
     speed: 100,
-    snakeSize: 20,
+    snakeSize: 20
 });
 
-console.log("CTX :" , game.props.ctx);
+// canvas.width= 500;
+// canvas.height= 500;
 
 // game.resizeCanvas(2, 50);
 
-console.log("CTX after : " , game.props.ctx);
-
-
-
+// console.log("CTX after : " , game.setting.ctx);
 // game.render.drawGrid();
-console.log('5 - FROM I4ndex', game.props);
-
+// console.log('5 - FROM I4ndex', game.setting);
+//
 
 
 
