@@ -6,12 +6,12 @@ class Setting {
         this.gridSize = 20;
         this.step = 20;
         this.speed = 100;
-        this.snakeSize = 20;
+        this.snakeLength = 5;
         this.canvas = setting.canvas;
         this.ctx = setting.canvas.getContext("2d");
         this.step = setting.step;
         this.gridSize = setting.gridSize;
-        this.snakeSize = setting.snakeSize;
+        this.snakeLength = setting.snakeLength;
     }
     set newGridSize(value) {
         this.gridSize = value;
@@ -37,8 +37,6 @@ class Game {
         this.render = new Render(this.setting);
         this.resizeCanvas(this.setting.gridSize, this.setting.step);
         this.player = new Snake(this.setting);
-        this.player.draw();
-        this.player.animate();
     }
     start() {
     }

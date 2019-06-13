@@ -2,20 +2,23 @@ import enumerate = Reflect.enumerate;
 
 export type Color =  string;
 
-class Cell {
+export class Cell {
 
-    size: number;
-    x: number;
-    y: number;
-    color: Color;
+    pos: Vector = new Vector(0,0);
+    color: Color = '#000';
     turn: boolean = false;
 
-    constructor(size: number, x: number, y: number, turn: boolean, color: Color) {
-        this.size = size;
-        this.x = x;
-        this.y = y;
+    constructor( x: number, y: number,  color: Color) {
+        this.pos = new Vector(x ,y);
         this.color = color;
-        this.turn = turn;
+    }
+
+    off (ctx: CanvasRenderingContext2D, size: number){
+        ctx.clearRect(this.pos.x, this.pos.y, size,size)
+    }
+    on (ctx: CanvasRenderingContext2D, size: number){
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.pos.x, this.pos.y, size,size)
     }
 }
 
@@ -33,6 +36,7 @@ class VGrid { // Виртульная сетка в виде матрицы
 
         this.createMatrix();
     }
+
 
     createMatrix () {
         let x: [number];
@@ -73,6 +77,23 @@ export class Vector {
         return Math.sqrt(this.x ** 2 + this.y ** 2)
     }
 
+    up() {
+        this.x = 0;
+        this.y = -1;
+    }
+    down() {
+        this.x = 0;
+        this.y = 1;
+    }
+    left() {
+        this.x = -1;
+        this.y = 0;
+    }
+    right() {
+        this.x = 1;
+        this.y = 0;
+    }
+
 }
 
 
@@ -88,7 +109,7 @@ export type Props = {
     step: number;
     speed: number;
     // cellSize?: number;
-    snakeSize: number;
+    snakeLength: number;
 
     width?: number;
     height?: number;

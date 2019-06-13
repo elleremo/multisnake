@@ -25,14 +25,14 @@ class Setting implements Props{
     gridSize = 20;
     step =  20;
     speed = 100;
-    snakeSize = 20;
+    snakeLength = 5;
 
     constructor (setting: Props){
         this.canvas = setting.canvas;
         this.ctx = setting.canvas.getContext("2d");
         this.step = setting.step;
         this.gridSize = setting.gridSize;
-        this.snakeSize = setting.snakeSize;
+        this.snakeLength = setting.snakeLength;
     }
 
     set newGridSize(value: number) {
@@ -82,11 +82,12 @@ class Game {
         this.resizeCanvas(this.setting.gridSize, this.setting.step);
 
         this.player = new Snake(this.setting);
-        this.player.draw();
-        this.player.animate();
+        // this.player.draw();
+        // this.player.animate();
         // console.log( 'set: ', this.setting );
 
     }
+
 
     // newGame() {
     //     this.level = new Level();

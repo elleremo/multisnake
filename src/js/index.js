@@ -5,5 +5,5 @@ let game = new Game({
     gridSize: 20,
     step: 20,
     speed: 100,
-    snakeSize: 20
+    snakeLength: 5,
 });

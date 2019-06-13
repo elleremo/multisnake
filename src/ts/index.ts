@@ -6,7 +6,8 @@ let canvas = document.querySelector("canvas");
     gridSize : 20,
     step: 20, // размер клетки
     speed: 100,
-    snakeSize: 20
+    snakeLength: 5,
+
 });
 
 // canvas.width= 500;

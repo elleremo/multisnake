@@ -1,11 +1,17 @@
-﻿class Cell {
-    constructor(size, x, y, turn, color) {
+﻿export class Cell {
+    constructor(x, y, color) {
+        this.pos = new Vector(0, 0);
+        this.color = '#000';
         this.turn = false;
-        this.size = size;
-        this.x = x;
-        this.y = y;
+        this.pos = new Vector(x, y);
         this.color = color;
-        this.turn = turn;
+    }
+    off(ctx, size) {
+        ctx.clearRect(this.pos.x, this.pos.y, size, size);
+    }
+    on(ctx, size) {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.pos.x, this.pos.y, size, size);
     }
 }
 class VGrid {
@@ -41,6 +47,22 @@ export class Vector {
     }
     get length() {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+    }
+    up() {
+        this.x = 0;
+        this.y = -1;
+    }
+    down() {
+        this.x = 0;
+        this.y = 1;
+    }
+    left() {
+        this.x = -1;
+        this.y = 0;
+    }
+    right() {
+        this.x = 1;
+        this.y = 0;
     }
 }
 export class Rect extends Vector {
