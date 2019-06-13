@@ -83,7 +83,7 @@ class Game {
 
         this.player = new Snake(this.setting);
         // this.player.draw();
-        // this.player.animate();
+        this.player.animate();
         // console.log( 'set: ', this.setting );
 
     }

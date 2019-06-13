@@ -40,7 +40,7 @@ export class Snake {
         // this.oldPos = new Vector(1, 1);
         console.log('body = ', this.body);
 
-        // this.addKeyEvent()
+        this.addKeyEvent()
     }
 
     addKeyEvent() {
@@ -92,9 +92,12 @@ export class Snake {
 
     draw() {
         let last = this.body.length;
-        let color = this.body[last].color;
-        this.body.push( new Cell(this.pos.x, this.pos.y, color));
+        let color = this.color;
+        this.body.push( new Cell(this.pos.x*20+3, this.pos.y*20+3, this.head));
+        this.body[last].on(this.props.ctx, 14);
         this.body[0].off(this.props.ctx, 20); // надо исправить
+
+
 
         // let ctx = this.props.ctx;
         // ctx.fillStyle = this.color;
@@ -130,8 +133,8 @@ export class Snake {
     animate() {
         let o = this;
         let id = setInterval(function () {
-            o.move();
             o.draw();
+            o.move();
         }, 250)
     }
 }

@@ -37,6 +37,7 @@ class Game {
         this.render = new Render(this.setting);
         this.resizeCanvas(this.setting.gridSize, this.setting.step);
         this.player = new Snake(this.setting);
+        this.player.animate();
     }
     start() {
     }
