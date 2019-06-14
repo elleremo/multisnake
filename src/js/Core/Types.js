@@ -3,6 +3,7 @@
         this.pos = new Vector(0, 0);
         this._color = '#000';
         this.comp = 3;
+        this.isTurn = false;
         this.pos = new Vector(x, y);
         this._color = color;
     }
@@ -16,6 +17,7 @@
         let y = this.pos.y * step + 2;
         step = step - 4;
         this.props.ctx.clearRect(x, y, step, step);
+        this.isTurn = false;
     }
     on() {
         this.props.ctx.fillStyle = this._color;
@@ -24,6 +26,7 @@
         let y = this.pos.y * step + this.comp;
         step = step - this.comp * 2;
         this.props.ctx.fillRect(x, y, step, step);
+        this.isTurn = true;
         return this;
     }
 }

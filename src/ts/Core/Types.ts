@@ -8,6 +8,7 @@ export class Cell {
     _color: Color = '#000';
     props: Props;
     comp: number = 3;
+    isTurn: boolean = false;
 
     constructor(x: number, y: number, color: Color) {
         this.pos = new Vector(x, y);
@@ -29,7 +30,9 @@ export class Cell {
 
         step = step - 4;
 
-        this.props.ctx.clearRect(x, y, step, step)
+        this.props.ctx.clearRect(x, y, step, step);
+        this.isTurn = false;
+
     }
 
     on() {
@@ -43,6 +46,8 @@ export class Cell {
         step = step - this.comp*2;
 
         this.props.ctx.fillRect(x, y, step, step);
+
+        this.isTurn = true;
 
         return this;
     }

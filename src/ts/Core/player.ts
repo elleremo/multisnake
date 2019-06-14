@@ -60,7 +60,7 @@ export class Snake {
             this.body.push(o);
         }
 
-        console.log('Proto: ',this.body );
+        console.log('Body: ',this.body );
     }
 
     draw() {
@@ -108,10 +108,26 @@ export class Snake {
         // this.oldPos.y += this.dir.y;
     }
 
+    isCrash(){
+        let head = this.body[this.body.length-1].pos; // head position Vector
+        // Если индекс head не равен текущему то чтото делаем
+
+        for (let index in this.body){
+            let i  = +index;
+
+            if( i !== (this.body.length-1) && this.body[i].isTurn){
+               if ( head.x == this.body[i].pos.x && head.y == this.body[i].pos.y){
+                   alert('Столкновение');
+               }
+            }
+        }
+    }
+
     animate() {
         let o = this;
         let id = setInterval(function () {
             o.move();
+            o.isCrash();
             o.draw();
         }, this.speed)
     }

@@ -32,7 +32,7 @@ export class Snake {
             let o = new Cell(x, y, color).on();
             this.body.push(o);
         }
-        console.log('Proto: ', this.body);
+        console.log('Body: ', this.body);
     }
     draw() {
         let last = this.body.length - 1;
@@ -47,10 +47,22 @@ export class Snake {
         this.pos.x += this.dir.x;
         this.pos.y += this.dir.y;
     }
+    isCrash() {
+        let head = this.body[this.body.length - 1].pos;
+        for (let index in this.body) {
+            let i = +index;
+            if (i !== (this.body.length - 1) && this.body[i].isTurn) {
+                if (head.x == this.body[i].pos.x && head.y == this.body[i].pos.y) {
+                    alert('Столкновение');
+                }
+            }
+        }
+    }
     animate() {
         let o = this;
         let id = setInterval(function () {
             o.move();
+            o.isCrash();
             o.draw();
         }, this.speed);
     }
