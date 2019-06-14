@@ -1,6 +1,7 @@
 import {Level} from "./level"
 import {Render} from "./render"
 import {Props} from "./Types"
+import {Snake} from "./player"
 // import {LevelManager} from "./level_manager"
 // import {ObjectManager} from "./object_manager"
 
@@ -17,57 +18,95 @@ import {Props} from "./Types"
 // Имеет методы Stop, Run, Reload
 
 
+class Setting implements Props{
+
+    canvas : HTMLCanvasElement;
+    ctx: CanvasRenderingContext2D;
+    gridSize = 20;
+    step =  20;
+    speed = 100;
+    snakeLength = 5;
+
+    constructor (setting: Props){
+        this.canvas = setting.canvas;
+        this.ctx = setting.canvas.getContext("2d");
+        this.step = setting.step;
+        this.gridSize = setting.gridSize;
+        this.snakeLength = setting.snakeLength;
+    }
+
+    set newGridSize(value: number) {
+
+        this.gridSize = value; // 20
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+
+    }
+
+    set newStep(value: number) {
+
+        this.step = value;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    }
+
+    get width() {
+        return this.gridSize*this.step
+    }
+
+    get height() {
+        return this.gridSize*this.step
+    }
+
+
+}
 
 
 class Game {
     // Ссылка-объект, доступен для изменения другим классам
-    props: Props = {
-        canvas: HTMLCanvasElement,
-        width: 500,
-        height: 500,
-        speed: 100,
-        cellSize: 20,
-        snakeSize: 20
-    };
+    setting: Setting;
     level : Level;
     render : Render;
+    player: Snake;
 
     // levelManager = new LevelManager();
     // objectManager = new ObjectManager();
 
-    constructor(props: Props) {
+    constructor(set: Props) {
 
-        this.props = props;
-        this.props.width +=2; //
-        this.props.height +=2; //
+        this.setting = new Setting(set);
+        this.level = new Level(this.setting);
+        this.render = new Render(this.setting);
 
-        this.props.ctx = this.props.canvas.getContext("2d");
 
-        this.resizeCanvas(props.width,props.height);
+        this.resizeCanvas(this.setting.gridSize, this.setting.step);
 
-        this.level = new Level(this.props);
-        this.render = new Render(this.props);
-        this.render.drawGrid();
+        this.player = new Snake(this.setting);
+        this.player.draw();
+        this.player.animate();
+        // console.log( 'set: ', this.setting );
+
+
     }
+
 
     // newGame() {
     //     this.level = new Level();
     // }
 
-    set width(value: number) {
-        this.props.width = value;
-        this.props.canvas.width = value;
+    start () {
+
     }
 
-    set height(value: number) {
-        this.props.height = value;
-        this.props.canvas.height = value;
-    }
+    // Получение настроек ->
+
+
 
     // Решить проблему с типизацией undefined
-    resizeCanvas(width: number, height: number) {
-        this.width = width ;
-        this.height = height;
+    resizeCanvas(gridSize: number, step: number) {
+        this.setting.newStep = step;
+        this.setting.newGridSize = gridSize;
+        this.render.drawGrid();
     }
 }
 

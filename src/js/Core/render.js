@@ -1,30 +1,29 @@
 ﻿export class Render {
-    constructor(props) {
-        this.props = props;
+    constructor(setting) {
+        this.setting = setting;
     }
     clearGrid() {
-        this.props.ctx.clearRect(0, 0, this.props.width, this.props.height - 2);
+        this.setting.ctx.clearRect(0, 0, this.setting.width, this.setting.height);
         console.log("clearGrid");
     }
     drawGrid() {
         this.clearGrid();
-        let step = this.props.cellSize;
-        let ctx = this.props.ctx;
+        let step = this.setting.step;
+        let ctx = this.setting.ctx;
         ctx.lineWidth = 1;
         ctx.strokeStyle = '#d3d1d0';
-        for (var i = 1; i < this.props.width; i += step) {
-            ctx.moveTo(i, 0);
-            ctx.lineTo(i, this.props.height);
+        for (let i = 0; i < this.setting.gridSize; i++) {
+            ctx.moveTo(i * step, 0);
+            ctx.lineTo(i * step, this.setting.height);
             ctx.stroke();
-            console.log('i = ', i);
         }
-        for (var i = 1; i < this.props.height; i += step) {
-            ctx.moveTo(0, i);
-            ctx.lineTo(this.props.width, i);
+        for (var i = 0; i < this.setting.gridSize; i++) {
+            ctx.moveTo(0, i * step);
+            ctx.lineTo(this.setting.width, i * step);
             ctx.stroke();
         }
         ctx.strokeStyle = '#000000';
-        ctx.strokeRect(1, 1, this.props.width - 2, this.props.height - 2);
+        ctx.strokeRect(0, 0, this.setting.width, this.setting.height);
         console.log("DrawGrid");
     }
 }
