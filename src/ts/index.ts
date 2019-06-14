@@ -9,7 +9,6 @@ let canvas = document.querySelector("canvas");
     snakeLength: 5,
 
 });
-
 // canvas.width= 500;
 // canvas.height= 500;
 

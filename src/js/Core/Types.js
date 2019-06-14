@@ -1,17 +1,30 @@
 ﻿export class Cell {
     constructor(x, y, color) {
         this.pos = new Vector(0, 0);
-        this.color = '#000';
-        this.turn = false;
+        this._color = '#000';
+        this.comp = 3;
         this.pos = new Vector(x, y);
-        this.color = color;
+        this._color = color;
     }
-    off(ctx, size) {
-        ctx.clearRect(this.pos.x, this.pos.y, size, size);
+    color(color) {
+        this._color = color;
+        this.on();
     }
-    on(ctx, size) {
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.pos.x, this.pos.y, size, size);
+    off() {
+        let step = this.props.step;
+        let x = this.pos.x * step + 2;
+        let y = this.pos.y * step + 2;
+        step = step - 4;
+        this.props.ctx.clearRect(x, y, step, step);
+    }
+    on() {
+        this.props.ctx.fillStyle = this._color;
+        let step = this.props.step;
+        let x = this.pos.x * step + this.comp;
+        let y = this.pos.y * step + this.comp;
+        step = step - this.comp * 2;
+        this.props.ctx.fillRect(x, y, step, step);
+        return this;
     }
 }
 class VGrid {

@@ -2,24 +2,57 @@
 export class Snake {
     constructor(props) {
         this.id = -1;
-        this.color = '#c976c1';
-        this.head = '#87212f';
-        this.body = [];
-        this.startLength = 5;
-        this.pos = new Vector(10, 1);
+        this.bodyColor = '#c976c1';
+        this.headColor = '#87212f';
+        this.snakeLength = 5;
+        this.pos = new Vector(5, 1);
         this.dir = new Vector(1, 0);
+        this.body = [];
         console.log(this);
         Snake.CountSnakes += 1;
         this.id += 1;
         this.props = props;
         this.size = this.props.step;
-        this.speed = 300 - props.speed;
-        this.startLength = props.snakeLength;
+        this.speed = 400 - props.speed;
+        this.snakeLength = props.snakeLength;
+        Cell.prototype.props = this.props;
         this.generate();
         console.log('snlength', props.snakeLength);
         console.log('dir', this.pos);
         console.log('body = ', this.body);
         this.addKeyEvent();
+    }
+    generate() {
+        for (let i = 0; i < this.snakeLength; i++) {
+            let x = this.pos.x - this.snakeLength + i;
+            let y = this.pos.y;
+            let color = this.bodyColor;
+            if (i == this.snakeLength - 1)
+                color = this.headColor;
+            let o = new Cell(x, y, color).on();
+            this.body.push(o);
+        }
+        console.log('Proto: ', this.body);
+    }
+    draw() {
+        let last = this.body.length - 1;
+        let color = this.bodyColor;
+        let headcell = this.body[last];
+        headcell.color(color);
+        this.body[this.body.length - this.snakeLength].off();
+        let o = new Cell(this.pos.x, this.pos.y, this.headColor);
+        this.body.push(o.on());
+    }
+    move() {
+        this.pos.x += this.dir.x;
+        this.pos.y += this.dir.y;
+    }
+    animate() {
+        let o = this;
+        let id = setInterval(function () {
+            o.move();
+            o.draw();
+        }, this.speed);
     }
     addKeyEvent() {
         let o = this;
@@ -47,35 +80,6 @@ export class Snake {
                     break;
             }
         });
-    }
-    generate() {
-        for (let i = 0; i < this.startLength; i++) {
-            let x = (this.pos.x - this.startLength + i) * 20;
-            let y = this.pos.y * 20;
-            let color = this.color;
-            if (i == this.startLength - 1)
-                color = this.head;
-            this.body.push(new Cell(x + 3, y + 3, color));
-            this.body[i].on(this.props.ctx, 14);
-        }
-    }
-    draw() {
-        let last = this.body.length;
-        let color = this.color;
-        this.body.push(new Cell(this.pos.x * 20 + 3, this.pos.y * 20 + 3, this.head));
-        this.body[last].on(this.props.ctx, 14);
-        this.body[0].off(this.props.ctx, 20);
-    }
-    move() {
-        this.pos.x += this.dir.x;
-        this.pos.y += this.dir.y;
-    }
-    animate() {
-        let o = this;
-        let id = setInterval(function () {
-            o.draw();
-            o.move();
-        }, 250);
     }
 }
 Snake.CountSnakes = 0;

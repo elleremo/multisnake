@@ -1,24 +1,50 @@
 import enumerate = Reflect.enumerate;
 
-export type Color =  string;
+export type Color = string;
 
 export class Cell {
 
-    pos: Vector = new Vector(0,0);
-    color: Color = '#000';
-    turn: boolean = false;
+    pos: Vector = new Vector(0, 0);
+    _color: Color = '#000';
+    props: Props;
+    comp: number = 3;
 
-    constructor( x: number, y: number,  color: Color) {
-        this.pos = new Vector(x ,y);
-        this.color = color;
+    constructor(x: number, y: number, color: Color) {
+        this.pos = new Vector(x, y);
+        this._color = color;
+        // this.props = props;
+
     }
 
-    off (ctx: CanvasRenderingContext2D, size: number){
-        ctx.clearRect(this.pos.x, this.pos.y, size,size)
+    color(color: Color) {
+        this._color = color;
+        this.on();
     }
-    on (ctx: CanvasRenderingContext2D, size: number){
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.pos.x, this.pos.y, size,size)
+
+    off() {
+        let step = this.props.step;
+
+        let x  = this.pos.x * step + 2;
+        let y  = this.pos.y * step + 2;
+
+        step = step - 4;
+
+        this.props.ctx.clearRect(x, y, step, step)
+    }
+
+    on() {
+        this.props.ctx.fillStyle = this._color;
+
+        let step = this.props.step;
+
+        let x  = this.pos.x * step + this.comp;
+        let y  = this.pos.y * step + this.comp;
+
+        step = step - this.comp*2;
+
+        this.props.ctx.fillRect(x, y, step, step);
+
+        return this;
     }
 }
 
@@ -38,17 +64,19 @@ class VGrid { // Виртульная сетка в виде матрицы
     }
 
 
-    createMatrix () {
+    createMatrix() {
         let x: [number];
         let y: [number];
 
-        for (let  i = 0; i < this.amountX; i++) {
-            x.push(i) }
+        for (let i = 0; i < this.amountX; i++) {
+            x.push(i)
+        }
 
         for (let i = 0; i < this.amountY; i++) {
-            y.push(i) }
+            y.push(i)
+        }
 
-        this.matrix = [ x, y]
+        this.matrix = [x, y]
     }
 
 }
@@ -81,14 +109,17 @@ export class Vector {
         this.x = 0;
         this.y = -1;
     }
+
     down() {
         this.x = 0;
         this.y = 1;
     }
+
     left() {
         this.x = -1;
         this.y = 0;
     }
+
     right() {
         this.x = 1;
         this.y = 0;
