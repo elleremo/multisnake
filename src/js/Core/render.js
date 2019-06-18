@@ -11,7 +11,7 @@
         let step = this.setting.step;
         let ctx = this.setting.ctx;
         ctx.lineWidth = 1;
-        ctx.strokeStyle = '#d3d1d0';
+        ctx.strokeStyle = '#aec2dc';
         for (let i = 0; i < this.setting.gridSize; i++) {
             ctx.moveTo(i * step, 0);
             ctx.lineTo(i * step, this.setting.height);

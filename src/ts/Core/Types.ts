@@ -55,7 +55,7 @@ export class Cell {
 
 class VGrid { // Виртульная сетка в виде матрицы
 
-    matrix: Number[][];
+    matrix: number[][];
     pxSize: number;
     amountX: number;
     amountY: number;

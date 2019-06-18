@@ -4,8 +4,7 @@ export class Snake {
         this.id = -1;
         this.bodyColor = '#c976c1';
         this.headColor = '#87212f';
-        this.snakeLength = 5;
-        this.pos = new Vector(5, 1);
+        this.pos = new Vector(10, 1);
         this.dir = new Vector(1, 0);
         this.body = [];
         console.log(this);
@@ -15,6 +14,7 @@ export class Snake {
         this.size = this.props.step;
         this.speed = 400 - props.speed;
         this.snakeLength = props.snakeLength;
+        this.pos = new Vector(this.snakeLength, 1);
         Cell.prototype.props = this.props;
         this.generate();
         console.log('snlength', props.snakeLength);
@@ -64,7 +64,7 @@ export class Snake {
             o.move();
             o.isCrash();
             o.draw();
-        }, this.speed);
+        }, 200);
     }
     addKeyEvent() {
         let o = this;

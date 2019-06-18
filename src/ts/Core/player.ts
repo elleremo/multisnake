@@ -14,8 +14,8 @@ export class Snake {
     headColor: Color = '#87212f';
     size: number;
     speed: number;
-    snakeLength = 5;
-    pos: Vector = new Vector(5 , 1); //позиция головы
+    snakeLength: number;
+    pos: Vector = new Vector(10 , 1); //позиция головы
     dir: Vector = new Vector(1, 0);
 
     body: Cell[] = [];
@@ -32,6 +32,8 @@ export class Snake {
         this.size = this.props.step; // сжимаем отрисовку
         this.speed = 400 - props.speed;
         this.snakeLength = props.snakeLength;
+
+        this.pos = new Vector(this.snakeLength, 1);
 
         Cell.prototype.props = this.props;
 
@@ -129,7 +131,7 @@ export class Snake {
             o.move();
             o.isCrash();
             o.draw();
-        }, this.speed)
+        }, 200)
     }
 
     addKeyEvent() {
@@ -160,7 +162,6 @@ export class Snake {
                     o.dir.right();
                     break;
             }
-
         })
     }
 }
