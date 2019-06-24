@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
 
-//    "outDir": "./src/js/",
-//    "outFile": "ts/index.js",
+    "outDir": "./src/js/",
+//   "outFile": "ts/index.js",
     "sourceMap": true,
     "charset": "utf8",
     "emitBOM": true,
