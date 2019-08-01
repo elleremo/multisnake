@@ -5,13 +5,14 @@ class Setting {
     constructor(setting) {
         this.gridSize = 20;
         this.step = 20;
-        this.speed = 100;
+        this.speed = 1;
         this.snakeLength = 5;
         this.canvas = setting.canvas;
         this.ctx = setting.canvas.getContext("2d");
         this.step = setting.step;
         this.gridSize = setting.gridSize;
         this.snakeLength = setting.snakeLength;
+        this.speed = setting.speed;
     }
     set newGridSize(value) {
         this.gridSize = value;

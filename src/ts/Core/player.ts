@@ -1,4 +1,4 @@
-import {Props, Color, Vector, Cell} from "./Types"
+import {Cell, Color, Dir, Direction, Props, VGrid, Vector} from "./Types"
 
 // Snake должен уметь двигаться
 // Возможносто стоит создать вектор движения
@@ -15,9 +15,9 @@ export class Snake {
     size: number;
     speed: number;
     snakeLength: number;
-    pos: Vector = new Vector(10 , 1); //позиция головы
-    dir: Vector = new Vector(1, 0);
-
+    pos: Vector = new Vector(10, 1); //позиция головы
+    dir: Dir = new Dir(Direction.RIGHT);
+    matrix: VGrid;
     body: Cell[] = [];
 
     static CountSnakes: number = 0;
@@ -30,12 +30,14 @@ export class Snake {
         this.props = props;
 
         this.size = this.props.step; // сжимаем отрисовку
-        this.speed = 400 - props.speed;
+        this.speed = 1000 / props.speed;
         this.snakeLength = props.snakeLength;
 
         this.pos = new Vector(this.snakeLength, 1);
 
         Cell.prototype.props = this.props;
+
+        new VGrid(this.props.gridSize, this.props.gridSize);
 
         this.generate();
         console.log('snlength', props.snakeLength);
@@ -44,7 +46,6 @@ export class Snake {
         // this.oldPos = new Vector(1, 1);
         console.log('body = ', this.body);
         this.addKeyEvent();
-
 
 
     }
@@ -56,27 +57,26 @@ export class Snake {
             let y = this.pos.y;
 
             let color: Color = this.bodyColor;
-            if (i == this.snakeLength-1) color = this.headColor;
+            if (i == this.snakeLength - 1) color = this.headColor;
 
-            let o = new Cell( x, y, color).on();
+            let o = new Cell(x, y, color).on();
             this.body.push(o);
         }
 
-        console.log('Body: ',this.body );
+        console.log('Body: ', this.body);
     }
 
     draw() {
-        let last = this.body.length-1;
+        let last = this.body.length - 1;
         let color = this.bodyColor;
 
         let headcell = this.body[last]; // -1 ???
         headcell.color(color);
 
-        this.body[this.body.length-this.snakeLength].off();
+        this.body[this.body.length - this.snakeLength].off();
 
         let o = new Cell(this.pos.x, this.pos.y, this.headColor);
         this.body.push(o.on());
-
 
 
         // let ctx = this.props.ctx;
@@ -103,6 +103,7 @@ export class Snake {
 
     move() {
 
+        // this.isCrash();
         this.pos.x += this.dir.x;
         this.pos.y += this.dir.y;
 
@@ -110,28 +111,34 @@ export class Snake {
         // this.oldPos.y += this.dir.y;
     }
 
-    isCrash(){
-        let head = this.body[this.body.length-1].pos; // head position Vector
+    isCrash() {
+        let head = this.body[this.body.length - 1].pos; // head position Vector
         // Если индекс head не равен текущему то чтото делаем
 
-        for (let index in this.body){
-            let i  = +index;
+        for (let index in this.body) {
+            let i = +index;
 
-            if( i !== (this.body.length-1) && this.body[i].isTurn){
-               if ( head.x == this.body[i].pos.x && head.y == this.body[i].pos.y){
-                   alert('Столкновение');
-               }
+            if (i !== (this.body.length - 1) && this.body[i].isTurn) {
+                if (head.x == this.body[i].pos.x && head.y == this.body[i].pos.y) {
+                    alert('Столкновение');
+                }
             }
         }
     }
 
     animate() {
         let o = this;
-        let id = setInterval(function () {
+
+        function f() {
+            // o.isCrash();
             o.move();
-            o.isCrash();
             o.draw();
-        }, 200)
+            o.animate()
+        }
+
+        setTimeout(f, this.speed)
+
+
     }
 
     addKeyEvent() {
@@ -145,20 +152,36 @@ export class Snake {
 
         }
 
+
+        window.document.addEventListener("keyup", (e) => {
+            if (e.code == Keys.DOWN || Keys.UP || Keys.LEFT || Keys.RIGHT) {
+                // console.log(o.speed);
+                o.speed = 1000;
+            }
+        });
+
         window.document.addEventListener('keydown', (e) => {
-            console.log(e);
+
 
             switch (e.code) {
                 case Keys.UP:
+                    if (o.dir.status == Direction.DOWN) break;
+                    o.speed = 100;
                     o.dir.up();
                     break;
                 case Keys.LEFT:
+                    if (o.dir.status == Direction.RIGHT) break;
+                    o.speed = 100;
                     o.dir.left();
                     break;
                 case Keys.DOWN:
+                    if (o.dir.status == Direction.UP) break;
+                    o.speed = 100;
                     o.dir.down();
                     break;
                 case Keys.RIGHT:
+                    if (o.dir.status == Direction.LEFT) break;
+                    o.speed = 100;
                     o.dir.right();
                     break;
             }

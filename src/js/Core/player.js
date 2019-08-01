@@ -1,21 +1,22 @@
-﻿import { Vector, Cell } from "./Types";
+﻿import { Cell, Dir, Direction, VGrid, Vector } from "./Types";
 export class Snake {
     constructor(props) {
         this.id = -1;
         this.bodyColor = '#c976c1';
         this.headColor = '#87212f';
         this.pos = new Vector(10, 1);
-        this.dir = new Vector(1, 0);
+        this.dir = new Dir(Direction.RIGHT);
         this.body = [];
         console.log(this);
         Snake.CountSnakes += 1;
         this.id += 1;
         this.props = props;
         this.size = this.props.step;
-        this.speed = 400 - props.speed;
+        this.speed = 1000 / props.speed;
         this.snakeLength = props.snakeLength;
         this.pos = new Vector(this.snakeLength, 1);
         Cell.prototype.props = this.props;
+        new VGrid(this.props.gridSize, this.props.gridSize);
         this.generate();
         console.log('snlength', props.snakeLength);
         console.log('dir', this.pos);
@@ -60,11 +61,12 @@ export class Snake {
     }
     animate() {
         let o = this;
-        let id = setInterval(function () {
+        function f() {
             o.move();
-            o.isCrash();
             o.draw();
-        }, 200);
+            o.animate();
+        }
+        setTimeout(f, this.speed);
     }
     addKeyEvent() {
         let o = this;
@@ -75,19 +77,35 @@ export class Snake {
             Keys["DOWN"] = "KeyS";
             Keys["RIGHT"] = "KeyD";
         })(Keys || (Keys = {}));
+        window.document.addEventListener("keyup", (e) => {
+            if (e.code == Keys.DOWN || Keys.UP || Keys.LEFT || Keys.RIGHT) {
+                o.speed = 1000;
+            }
+        });
         window.document.addEventListener('keydown', (e) => {
-            console.log(e);
             switch (e.code) {
                 case Keys.UP:
+                    if (o.dir.status == Direction.DOWN)
+                        break;
+                    o.speed = 100;
                     o.dir.up();
                     break;
                 case Keys.LEFT:
+                    if (o.dir.status == Direction.RIGHT)
+                        break;
+                    o.speed = 100;
                     o.dir.left();
                     break;
                 case Keys.DOWN:
+                    if (o.dir.status == Direction.UP)
+                        break;
+                    o.speed = 100;
                     o.dir.down();
                     break;
                 case Keys.RIGHT:
+                    if (o.dir.status == Direction.LEFT)
+                        break;
+                    o.speed = 100;
                     o.dir.right();
                     break;
             }

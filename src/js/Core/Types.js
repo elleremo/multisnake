@@ -30,33 +30,28 @@
         return this;
     }
 }
-class VGrid {
-    constructor(pxSize, amountX, amountY) {
-        this.pxSize = pxSize;
+export class VGrid {
+    constructor(amountX, amountY) {
         this.amountX = amountX;
         this.amountY = amountY;
         this.createMatrix();
     }
     createMatrix() {
-        let x;
-        let y;
-        for (let i = 0; i < this.amountX; i++) {
-            x.push(i);
+        let matrix = [];
+        for (var x = 0; x < this.amountX; x++) {
+            matrix[x] = [];
+            for (var y = 0; y < this.amountY; y++) {
+                matrix[x][y] = 0;
+            }
         }
-        for (let i = 0; i < this.amountY; i++) {
-            y.push(i);
-        }
-        this.matrix = [x, y];
+        console.log(matrix);
     }
-}
-class OV {
 }
 export class Vector {
     constructor(x, y) {
         this._length = 0;
         this.x = x;
         this.y = y;
-        this.length = this.length;
     }
     set length(value) {
         this._length = value;
@@ -64,19 +59,49 @@ export class Vector {
     get length() {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
     }
+}
+export var Direction;
+(function (Direction) {
+    Direction["UP"] = "UP";
+    Direction["LEFT"] = "LEFT";
+    Direction["DOWN"] = "DOWN";
+    Direction["RIGHT"] = "RIGHT";
+})(Direction || (Direction = {}));
+export class Dir extends Vector {
+    constructor(dir) {
+        super(1, 0);
+        switch (dir) {
+            case Direction.UP:
+                this.up();
+                break;
+            case Direction.DOWN:
+                this.down();
+                break;
+            case Direction.LEFT:
+                this.left();
+                break;
+            case Direction.RIGHT:
+                this.right();
+                break;
+        }
+    }
     up() {
+        this.status = Direction.UP;
         this.x = 0;
         this.y = -1;
     }
     down() {
+        this.status = Direction.DOWN;
         this.x = 0;
         this.y = 1;
     }
     left() {
+        this.status = Direction.LEFT;
         this.x = -1;
         this.y = 0;
     }
     right() {
+        this.status = Direction.RIGHT;
         this.x = 1;
         this.y = 0;
     }

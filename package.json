@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "dependencies": {},
   "devDependencies": {
-    "less-loader": "^5.0.0"
+    "less-loader": "^5.0.0",
+    "webpack-livereload-plugin": "^2.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
