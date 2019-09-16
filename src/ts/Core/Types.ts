@@ -1,4 +1,4 @@
-import enumerate = Reflect.enumerate;
+// import enumerate = Reflect.enumerate;
 
 export type Color = string;
 
@@ -55,7 +55,7 @@ export class Cell {
 
 export class VGrid { // Виртульная сетка в виде матрицы
 
-    matrix: number[][];
+   public matrix: number[][];
     amountX: number;
     amountY: number;
 
@@ -74,13 +74,13 @@ export class VGrid { // Виртульная сетка в виде матриц
         let matrix: number[][] = [];
 
         for (var x=0; x< this.amountX; x++) {
-            matrix[x]=[];
+            matrix[x]=[0];
             for (var y=0; y<this.amountY; y++){
                 matrix[x][y]=0;
             }
         }
 
-        console.log(matrix)
+        this.matrix = matrix;
 
     }
 

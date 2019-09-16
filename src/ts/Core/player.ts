@@ -10,14 +10,14 @@ export class Snake {
     props: Props;
     id = -1; // Чтобы первый snake имел id = 0
 
-    bodyColor: Color = '#c976c1';
-    headColor: Color = '#87212f';
+    bodyColor: Color = '#5c98c9';
+    headColor: Color = '#bd63e4';
     size: number;
     speed: number;
     snakeLength: number;
-    pos: Vector = new Vector(10, 1); //позиция головы
+    pos: Vector = new Vector(5, 1); //позиция головы 6 1
     dir: Dir = new Dir(Direction.RIGHT);
-    matrix: VGrid;
+    vgrid: VGrid ;
     body: Cell[] = [];
 
     static CountSnakes: number = 0;
@@ -33,18 +33,18 @@ export class Snake {
         this.speed = 1000 / props.speed;
         this.snakeLength = props.snakeLength;
 
-        this.pos = new Vector(this.snakeLength, 1);
+        // this.pos = new Vector(this.snakeLength, 1);
 
         Cell.prototype.props = this.props;
 
-        new VGrid(this.props.gridSize, this.props.gridSize);
-
+        this.vgrid = new VGrid(this.props.gridSize, this.props.gridSize);
+        // console.log('VGRIIID', this.vgrid);
         this.generate();
-        console.log('snlength', props.snakeLength);
-        console.log('dir', this.pos);
+        // console.log('snakeLength', props.snakeLength);
+        // console.log('dir', this.pos);
 
         // this.oldPos = new Vector(1, 1);
-        console.log('body = ', this.body);
+        // console.log('body = ', this.body);
         this.addKeyEvent();
 
 
@@ -52,31 +52,59 @@ export class Snake {
 
     generate() {
 
-        for (let i = 0; i < this.snakeLength; i++) {
-            let x = this.pos.x - this.snakeLength + i;
+
+
+        for (let i = 0 ; i < this.snakeLength; i++) {
+            let x = this.pos.x - this.snakeLength + i; // 6-5+0
             let y = this.pos.y;
+
+            //
+            // if (x < 0 || y<0){
+            //
+            // }
+            // else {
+            //     this.vgrid.matrix[y][x] = 1;
+            // }
 
             let color: Color = this.bodyColor;
             if (i == this.snakeLength - 1) color = this.headColor;
 
-            let o = new Cell(x, y, color).on();
+            let o = new Cell(x, y, color);
+
             this.body.push(o);
         }
 
-        console.log('Body: ', this.body);
+         this.draw();
+         console.log('GEN', this.vgrid);
     }
 
     draw() {
-        let last = this.body.length - 1;
-        let color = this.bodyColor;
 
-        let headcell = this.body[last]; // -1 ???
-        headcell.color(color);
 
-        this.body[this.body.length - this.snakeLength].off();
+        for (var cell in this.body){
+            this.body[cell].on();
 
-        let o = new Cell(this.pos.x, this.pos.y, this.headColor);
-        this.body.push(o.on());
+        }
+
+
+        //
+        // let last = this.body.length - 1;
+        // let color = this.bodyColor;
+        //
+        // let headcell = this.body[last]; // -1 ???
+        // headcell.color(color);
+        //
+        //
+        // let ass = this.body[this.body.length - this.snakeLength];
+        //
+        // ass.off();
+        // // this.vgrid.matrix[ass.pos.x][ass.pos.y]=0;
+        // // this.body.shift(); // удаляем задницу после выключения
+        //
+        // let o = new Cell(this.pos.x, this.pos.y, this.headColor);
+        // // this.vgrid.matrix[this.pos.x][this.pos.y]=1;
+        // this.body.push(o.on());
+
 
 
         // let ctx = this.props.ctx;
@@ -102,11 +130,11 @@ export class Snake {
     }
 
     move() {
-
+        var v;
         // this.isCrash();
         this.pos.x += this.dir.x;
         this.pos.y += this.dir.y;
-
+        console.log('Body: ', this.body);
         // this.oldPos.x += this.dir.x;
         // this.oldPos.y += this.dir.y;
     }
@@ -131,9 +159,9 @@ export class Snake {
 
         function f() {
             // o.isCrash();
-            o.move();
+            // o.move();
             o.draw();
-            o.animate()
+            // o.animate()
         }
 
         setTimeout(f, this.speed)
@@ -152,11 +180,12 @@ export class Snake {
 
         }
 
+        let speed = o.speed;
 
         window.document.addEventListener("keyup", (e) => {
             if (e.code == Keys.DOWN || Keys.UP || Keys.LEFT || Keys.RIGHT) {
                 // console.log(o.speed);
-                o.speed = 1000;
+                o.speed = speed;
             }
         });
 
@@ -166,22 +195,22 @@ export class Snake {
             switch (e.code) {
                 case Keys.UP:
                     if (o.dir.status == Direction.DOWN) break;
-                    o.speed = 100;
+                    // o.speed = 100;
                     o.dir.up();
                     break;
                 case Keys.LEFT:
                     if (o.dir.status == Direction.RIGHT) break;
-                    o.speed = 100;
+                    // o.speed = 100;
                     o.dir.left();
                     break;
                 case Keys.DOWN:
                     if (o.dir.status == Direction.UP) break;
-                    o.speed = 100;
+                    // o.speed = 100;
                     o.dir.down();
                     break;
                 case Keys.RIGHT:
                     if (o.dir.status == Direction.LEFT) break;
-                    o.speed = 100;
+                    // o.speed = 100;
                     o.dir.right();
                     break;
             }

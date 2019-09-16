@@ -1,15 +1,17 @@
-import { Cell, Dir, Direction, VGrid, Vector } from "./Types";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Types_1 = require("./Types");
 // Snake должен уметь двигаться
 // Возможносто стоит создать вектор движения
 // и поворачивать его на 90гр по нажатию клавиши
 //
-export class Snake {
-    constructor(props) {
+var Snake = /** @class */ (function () {
+    function Snake(props) {
         this.id = -1; // Чтобы первый snake имел id = 0
         this.bodyColor = '#5c98c9';
         this.headColor = '#bd63e4';
-        this.pos = new Vector(5, 1); //позиция головы 6 1
-        this.dir = new Dir(Direction.RIGHT);
+        this.pos = new Types_1.Vector(5, 1); //позиция головы 6 1
+        this.dir = new Types_1.Dir(Types_1.Direction.RIGHT);
         this.body = [];
         console.log(this);
         Snake.CountSnakes += 1;
@@ -19,8 +21,8 @@ export class Snake {
         this.speed = 1000 / props.speed;
         this.snakeLength = props.snakeLength;
         // this.pos = new Vector(this.snakeLength, 1);
-        Cell.prototype.props = this.props;
-        this.vgrid = new VGrid(this.props.gridSize, this.props.gridSize);
+        Types_1.Cell.prototype.props = this.props;
+        this.vgrid = new Types_1.VGrid(this.props.gridSize, this.props.gridSize);
         // console.log('VGRIIID', this.vgrid);
         this.generate();
         // console.log('snakeLength', props.snakeLength);
@@ -29,10 +31,10 @@ export class Snake {
         // console.log('body = ', this.body);
         this.addKeyEvent();
     }
-    generate() {
-        for (let i = 0; i < this.snakeLength; i++) {
-            let x = this.pos.x - this.snakeLength + i; // 6-5+0
-            let y = this.pos.y;
+    Snake.prototype.generate = function () {
+        for (var i = 0; i < this.snakeLength; i++) {
+            var x = this.pos.x - this.snakeLength + i; // 6-5+0
+            var y = this.pos.y;
             //
             // if (x < 0 || y<0){
             //
@@ -40,16 +42,16 @@ export class Snake {
             // else {
             //     this.vgrid.matrix[y][x] = 1;
             // }
-            let color = this.bodyColor;
+            var color = this.bodyColor;
             if (i == this.snakeLength - 1)
                 color = this.headColor;
-            let o = new Cell(x, y, color);
+            var o = new Types_1.Cell(x, y, color);
             this.body.push(o);
         }
         this.draw();
         console.log('GEN', this.vgrid);
-    }
-    draw() {
+    };
+    Snake.prototype.draw = function () {
         for (var cell in this.body) {
             this.body[cell].on();
         }
@@ -89,8 +91,8 @@ export class Snake {
         //
         //
         // ctx.clearRect(assX + comp, assY + comp, size, size);
-    }
-    move() {
+    };
+    Snake.prototype.move = function () {
         var v;
         // this.isCrash();
         this.pos.x += this.dir.x;
@@ -98,21 +100,21 @@ export class Snake {
         console.log('Body: ', this.body);
         // this.oldPos.x += this.dir.x;
         // this.oldPos.y += this.dir.y;
-    }
-    isCrash() {
-        let head = this.body[this.body.length - 1].pos; // head position Vector
+    };
+    Snake.prototype.isCrash = function () {
+        var head = this.body[this.body.length - 1].pos; // head position Vector
         // Если индекс head не равен текущему то чтото делаем
-        for (let index in this.body) {
-            let i = +index;
+        for (var index in this.body) {
+            var i = +index;
             if (i !== (this.body.length - 1) && this.body[i].isTurn) {
                 if (head.x == this.body[i].pos.x && head.y == this.body[i].pos.y) {
                     alert('Столкновение');
                 }
             }
         }
-    }
-    animate() {
-        let o = this;
+    };
+    Snake.prototype.animate = function () {
+        var o = this;
         function f() {
             // o.isCrash();
             // o.move();
@@ -120,51 +122,53 @@ export class Snake {
             // o.animate()
         }
         setTimeout(f, this.speed);
-    }
-    addKeyEvent() {
-        let o = this;
-        let Keys;
+    };
+    Snake.prototype.addKeyEvent = function () {
+        var o = this;
+        var Keys;
         (function (Keys) {
             Keys["UP"] = "KeyW";
             Keys["LEFT"] = "KeyA";
             Keys["DOWN"] = "KeyS";
             Keys["RIGHT"] = "KeyD";
         })(Keys || (Keys = {}));
-        let speed = o.speed;
-        window.document.addEventListener("keyup", (e) => {
+        var speed = o.speed;
+        window.document.addEventListener("keyup", function (e) {
             if (e.code == Keys.DOWN || Keys.UP || Keys.LEFT || Keys.RIGHT) {
                 // console.log(o.speed);
                 o.speed = speed;
             }
         });
-        window.document.addEventListener('keydown', (e) => {
+        window.document.addEventListener('keydown', function (e) {
             switch (e.code) {
                 case Keys.UP:
-                    if (o.dir.status == Direction.DOWN)
+                    if (o.dir.status == Types_1.Direction.DOWN)
                         break;
                     // o.speed = 100;
                     o.dir.up();
                     break;
                 case Keys.LEFT:
-                    if (o.dir.status == Direction.RIGHT)
+                    if (o.dir.status == Types_1.Direction.RIGHT)
                         break;
                     // o.speed = 100;
                     o.dir.left();
                     break;
                 case Keys.DOWN:
-                    if (o.dir.status == Direction.UP)
+                    if (o.dir.status == Types_1.Direction.UP)
                         break;
                     // o.speed = 100;
                     o.dir.down();
                     break;
                 case Keys.RIGHT:
-                    if (o.dir.status == Direction.LEFT)
+                    if (o.dir.status == Types_1.Direction.LEFT)
                         break;
                     // o.speed = 100;
                     o.dir.right();
                     break;
             }
         });
-    }
-}
-Snake.CountSnakes = 0;
+    };
+    Snake.CountSnakes = 0;
+    return Snake;
+}());
+exports.Snake = Snake;

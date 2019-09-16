@@ -1,2 +1,2 @@
-﻿export class LevelManager {
+export class LevelManager {
 }

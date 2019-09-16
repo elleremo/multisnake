@@ -1,4 +1,5 @@
-﻿export class Cell {
+// import enumerate = Reflect.enumerate;
+export class Cell {
     constructor(x, y, color) {
         this.pos = new Vector(0, 0);
         this._color = '#000';
@@ -6,6 +7,7 @@
         this.isTurn = false;
         this.pos = new Vector(x, y);
         this._color = color;
+        // this.props = props;
     }
     color(color) {
         this._color = color;
@@ -39,12 +41,12 @@ export class VGrid {
     createMatrix() {
         let matrix = [];
         for (var x = 0; x < this.amountX; x++) {
-            matrix[x] = [];
+            matrix[x] = [0];
             for (var y = 0; y < this.amountY; y++) {
                 matrix[x][y] = 0;
             }
         }
-        console.log(matrix);
+        this.matrix = matrix;
     }
 }
 export class Vector {
@@ -52,6 +54,7 @@ export class Vector {
         this._length = 0;
         this.x = x;
         this.y = y;
+        // this.length = this.length; // Проверить как работают сет/гет
     }
     set length(value) {
         this._length = value;

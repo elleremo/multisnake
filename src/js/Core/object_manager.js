@@ -1,2 +1,2 @@
-﻿export class ObjectManager {
+export class ObjectManager {
 }

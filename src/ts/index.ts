@@ -5,8 +5,8 @@ let canvas = document.querySelector("canvas");
     canvas : canvas,
     gridSize : 20,
     step: 20, // размер клетки
-    speed: 2,
-    snakeLength: 11,
+    speed: 5,
+    snakeLength: 5,
 
 });
 
