@@ -61,8 +61,8 @@ export class Snake {
     animate() {
         let o = this;
         let id = setInterval(function () {
-            o.move();
             o.isCrash();
+            o.move();
             o.draw();
         }, 200);
     }
@@ -79,15 +79,23 @@ export class Snake {
             console.log(e);
             switch (e.code) {
                 case Keys.UP:
+                    if (o.dir.y == 1)
+                        break;
                     o.dir.up();
                     break;
                 case Keys.LEFT:
+                    if (o.dir.x == 1)
+                        break;
                     o.dir.left();
                     break;
                 case Keys.DOWN:
+                    if (o.dir.y == -1)
+                        break;
                     o.dir.down();
                     break;
                 case Keys.RIGHT:
+                    if (o.dir.x == 1)
+                        break;
                     o.dir.right();
                     break;
             }

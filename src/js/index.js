@@ -2,8 +2,8 @@
 let canvas = document.querySelector("canvas");
 let game = new Game({
     canvas: canvas,
-    gridSize: 20,
-    step: 20,
+    gridSize: 30,
+    step: 15,
     speed: 350,
     snakeLength: 10,
 });

@@ -3,8 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="1435bc0d-b984-44f1-8dae-980dcc0e31c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/physx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/dist/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/src/js/Game.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/src/js/Game.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/src/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/src/js/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/ts/Game.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/ts/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physx/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/Core/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Core/Types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/Core/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Core/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/src/ts/Core/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/src/ts/Core/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ts/Core/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/Types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ts/Core/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/Core/player.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/index.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="90">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -31,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
+            <state relative-caret-position="1095">
               <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -52,8 +70,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/player.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="351">
+              <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -61,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/render.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="435">
               <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
@@ -70,20 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-              <folding>
-                <element signature="n#Cell#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="135">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -150,12 +174,12 @@
         <option value="$PROJECT_DIR$/dist/bundle.js" />
         <option value="$PROJECT_DIR$/dist/css/main.css" />
         <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/ts/Core/game.ts" />
-        <option value="$PROJECT_DIR$/src/ts/index.ts" />
-        <option value="$PROJECT_DIR$/src/ts/Core/Types.ts" />
         <option value="$PROJECT_DIR$/src/ts/Core/render.ts" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/ts/Core/player.ts" />
+        <option value="$PROJECT_DIR$/src/ts/Core/Types.ts" />
+        <option value="$PROJECT_DIR$/src/ts/index.ts" />
       </list>
     </option>
   </component>
@@ -173,11 +197,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1021" />
-  </component>
+  <component name="ProjectId" id="1Qxa6gkxgyPsS2Ez8kFEzY8SZrB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -191,24 +211,6 @@
             <path>
               <item name="snake" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Documents/Projects/snake" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="snake" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/Projects/snake" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="snake" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/Projects/snake" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="snake" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/Projects/snake" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -310,18 +312,21 @@
       <workItem from="1561388753804" duration="34000" />
       <workItem from="1561448257464" duration="1715000" />
       <workItem from="1561535814372" duration="577000" />
-      <workItem from="1564576218669" duration="390000" />
+      <workItem from="1564576218669" duration="3510000" />
+      <workItem from="1564654822981" duration="598000" />
+      <workItem from="1564667984980" duration="19000" />
+      <workItem from="1566199426586" duration="65000" />
+      <workItem from="1567407325871" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163694000" />
+    <option name="totallyTimeSpent" value="168238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1021" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7034596" visible="true" weight="0.16932908" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7034596" visible="true" weight="0.1773163" />
       <window_info id="Structure" order="1" sideWeight="0.29654035" side_tool="true" weight="0.19085173" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -330,12 +335,12 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49526814" weight="0.2831001" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TypeScript" order="6" sideWeight="0.3998935" visible="true" weight="0.29709366" />
+      <window_info anchor="bottom" id="TypeScript" order="6" sideWeight="0.39776358" visible="true" weight="0.29709366" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49921137" weight="0.32831" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.6001065" side_tool="true" visible="true" weight="0.29709366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.60223645" side_tool="true" visible="true" weight="0.29709366" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.53391165" side_tool="true" weight="0.2583423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -539,13 +544,6 @@
         <state relative-caret-position="-4" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/Core/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -560,13 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -574,10 +565,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/physx/ts/Game.ts" />
+    <entry file="file://$PROJECT_DIR$/physx/index.html" />
     <entry file="file://$PROJECT_DIR$/src/ts/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="90">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,37 +591,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding>
-            <element signature="n#Cell#0" />
-          </folding>
+        <state relative-caret-position="525">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/Core/render.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="435">
           <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ts/Core/game.ts">
+    <entry file="file://$PROJECT_DIR$/src/ts/Core/Types.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ts/Core/player.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="351">
+          <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
         </state>
       </provider>
     </entry>

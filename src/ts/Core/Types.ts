@@ -7,7 +7,7 @@ export class Cell {
     pos: Vector = new Vector(0, 0);
     _color: Color = '#000';
     props: Props;
-    comp: number = 3;
+    comp: number = 2;
     isTurn: boolean = false;
 
     constructor(x: number, y: number, color: Color) {

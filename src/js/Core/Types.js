@@ -2,7 +2,7 @@
     constructor(x, y, color) {
         this.pos = new Vector(0, 0);
         this._color = '#000';
-        this.comp = 3;
+        this.comp = 2;
         this.isTurn = false;
         this.pos = new Vector(x, y);
         this._color = color;

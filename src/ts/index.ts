@@ -3,8 +3,8 @@ import {Game} from "./Core/game";
 let canvas = document.querySelector("canvas");
  let game: Game = new Game({
     canvas : canvas,
-    gridSize : 20,
-    step: 20, // размер клетки
+    gridSize : 30,
+    step: 15, // размер клетки
     speed: 350,
     snakeLength: 10,
 

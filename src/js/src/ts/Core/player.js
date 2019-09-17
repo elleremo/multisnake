@@ -4,8 +4,8 @@ export class Snake {
         this.id = -1;
         this.bodyColor = '#c976c1';
         this.headColor = '#87212f';
-        this.pos = new Vector(10, 1);
-        this.dir = new Vector(1, 1);
+        this.pos = new Vector(0, 1);
+        this.dir = new Vector(0, 1);
         this.body = [];
         console.log(this);
         Snake.CountSnakes += 1;
