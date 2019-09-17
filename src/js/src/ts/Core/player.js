@@ -5,7 +5,7 @@ export class Snake {
         this.bodyColor = '#c976c1';
         this.headColor = '#87212f';
         this.pos = new Vector(10, 1);
-        this.dir = new Vector(1, 0);
+        this.dir = new Vector(1, 1);
         this.body = [];
         console.log(this);
         Snake.CountSnakes += 1;

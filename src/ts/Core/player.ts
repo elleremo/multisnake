@@ -16,7 +16,7 @@ export class Snake {
     speed: number;
     snakeLength: number;
     pos: Vector = new Vector(10 , 1); //позиция головы
-    dir: Vector = new Vector(1, 0);
+    dir: Vector = new Vector(1, 1);
 
     body: Cell[] = [];
 
@@ -62,7 +62,7 @@ export class Snake {
             this.body.push(o);
         }
 
-        console.log('Body: ',this.body );
+        console.log('Body: ', this.body );
     }
 
     draw() {
