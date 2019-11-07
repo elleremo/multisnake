@@ -22,7 +22,7 @@ export class Render {
         let step: number  = this.setting.step;
         let ctx : CanvasRenderingContext2D = this.setting.ctx;
 
-        ctx.lineWidth = 1;
+        ctx.lineWidth = 2;
         ctx.strokeStyle = '#aec2dc';
 
                         // кол-во клеток

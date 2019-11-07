@@ -24,7 +24,7 @@ class Setting implements Props{
     ctx: CanvasRenderingContext2D;
     gridSize = 20;
     step =  20;
-    speed = 100;
+    speed = 1;
     snakeLength = 5;
 
     constructor (setting: Props){
@@ -33,6 +33,7 @@ class Setting implements Props{
         this.step = setting.step;
         this.gridSize = setting.gridSize;
         this.snakeLength = setting.snakeLength;
+        this.speed = setting.speed;
     }
 
     set newGridSize(value: number) {
@@ -75,7 +76,7 @@ class Game {
     constructor(set: Props) {
 
         this.setting = new Setting(set);
-        this.level = new Level(this.setting);
+        // this.level = new Level(this.setting);
         this.render = new Render(this.setting);
 
 
